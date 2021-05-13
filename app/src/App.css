@@ -1,9 +1,8 @@
 .App {
   background-color: cornflowerblue;
   height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .Content{
   background-color: red;

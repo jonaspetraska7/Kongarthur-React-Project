@@ -1,0 +1,28 @@
+.message{
+    display: flex;
+}
+.text{
+    flex: 3;
+}
+.date{
+    font-size: small;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.messageText{
+    margin-left: 10px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.buttons{
+    display: flex;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+.arrow{
+    margin-right: 20px;
+}
+.delete{
+    margin-right: 5px;
+}

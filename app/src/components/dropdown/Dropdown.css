@@ -1,0 +1,44 @@
+.dropdown{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 0px 12px 2px rgba(0,0,0,0.39); 
+    box-shadow: 1px 0px 12px 2px rgba(0,0,0,0.39);
+    animation: fadein 0.3s;
+}
+.title{
+    color: rgb(49, 49, 49);
+    font-weight: 500;
+    height: 20px;
+    align-self: center;
+    padding: 12px;
+}
+.list{
+    color: rgb(49, 49, 49);
+    height: 150px;
+    background-color: rgb(233, 237, 248);
+}
+.clear{
+    color: rgb(49, 49, 49);
+    height: 20px;
+    padding: 10px;
+    align-self: center;
+}
+.clearButton{
+    color: rgb(160, 156, 182);
+    border: 0;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
