@@ -1,0 +1,11 @@
+.App {
+  background-color: cornflowerblue;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.Content{
+  background-color: red;
+  color: white;
+}
