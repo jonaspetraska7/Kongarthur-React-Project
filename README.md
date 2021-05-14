@@ -1,2 +1,20 @@
-# Kongarthur-React-Project
-This application was made to demonstrate the basics of React.
+# Kongarthur React Project 
+
+A Navbar with a notification bell and a dropdown using a Mock API. Project is meant to demonstrate the basics of React.
+
+## Installation / Usage
+
+Visit the deployed project on : https://compassionate-swanson-d08b74.netlify.app/
+
+Or alternatively you can run the project using these commands :
+
+```bash
+npm install
+npm start
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
