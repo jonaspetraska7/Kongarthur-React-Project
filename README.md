@@ -4,7 +4,8 @@ A Navbar with a notification bell and a dropdown using a Mock API. Project is me
 
 ## Installation / Usage
 
-Visit the deployed project on : https://compassionate-swanson-d08b74.netlify.app/
+Visit the deployed project on : https://compassionate-swanson-d08b74.netlify.app
+Api endpoints available : https://609db69733eed80017956fd6.mockapi.io/messages , https://609db69733eed80017956fd6.mockapi.io/options
 
 Or alternatively you can run the project using these commands :
 
