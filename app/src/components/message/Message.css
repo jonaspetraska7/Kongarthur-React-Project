@@ -1,11 +1,12 @@
 .message{
     display: flex;
+    padding-bottom: 10px;
 }
 .text{
     flex: 3;
 }
 .date{
-    font-size: small;
+    font-size: x-small;
     font-weight: 600;
     margin-left: 10px;
     margin-top: 5px;

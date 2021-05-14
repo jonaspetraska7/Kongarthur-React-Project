@@ -5,7 +5,6 @@ import './Navbar.css';
 class Navbar extends React.Component {
     constructor(props){
         super(props);
-        this.state = {notifications: 0}
     }
     render(){
         return (

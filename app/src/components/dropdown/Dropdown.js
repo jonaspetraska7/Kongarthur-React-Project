@@ -1,34 +1,50 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Message from '../message/Message';
 import './Dropdown.css';
 
-class Dropdown extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {notifications: 0}
+function Dropdown ({data, allViewed}) {
+
+    const [state, setState] = useState({
+        data : [],
+        dropdownVisible: false,
+        allClear: false
+    });
+
+    const clearAll = () => {
+        setState({...state, allClear: true})
+        state.data.map(function(x){
+          fetch('https://609db69733eed80017956fd6.mockapi.io/messages/'+ x.id, {method: 'DELETE'})
+        })
     }
 
-    clearAll = () => {
-        alert("Clearing all")
-    }
+    useEffect(() => {
+        setState({...state, data: data})
+    }, [])
+
+    useEffect(() => {
+         fetch('https://609db69733eed80017956fd6.mockapi.io/options/1', 
+         {
+            method : 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ allViewed: 'true' })
+        })
+    }, [allViewed])
     
-    render(){
-        return (
-            <div className="dropdown">
-                <div className="title">
-                    Hendelser
-                </div>
-                <div className="list">
-                    <Message></Message>
-                    <Message></Message>
-                    <Message></Message>
-                </div>
-                <div className="clear">
-                    <button className="clearButton" onClick={() => this.clearAll()}>Tom listen</button>
-                </div>
+    return (
+        <div className="dropdown">
+            <div className="title">
+                Hendelser
             </div>
-        );
-    }
+            <div className="list">
+                {!state.allClear && state.data.map(function(x,i){
+                    return <Message key={i} id={x.id} date={x.date} text={x.text} viewed={allViewed} deleted={state.allClear}></Message>
+                })}
+            </div>
+            <div className="clear">
+                <button className="clearButton" onClick={clearAll}>Tom listen </button>
+            </div>
+        </div>
+    );
 }
 
 export default Dropdown;
